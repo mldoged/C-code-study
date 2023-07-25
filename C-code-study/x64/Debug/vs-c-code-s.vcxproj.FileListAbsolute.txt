@@ -1,0 +1,3 @@
+D:\VS2022PG\vs-c-code-s\x64\Debug\vs-c-code-s.exe
+D:\PG_VS2022_gitV1\vs-c-code-s\x64\Debug\vs-c-code-s.exe
+D:\gitproject\C-code-study\x64\Debug\vs-c-code-s.exe
