@@ -116,21 +116,66 @@
  
  
 //P64：动态内存分配（3）
+//int main()
+//{
+//	int* p = (int*)malloc(40);
+//	if (p == NULL)
+//	{
+//		return 0;
+//	}
+//	int* p2 = realloc(p, 100);
+//	//int *p2= realloc(NULL,40);此时功能等价于malloc（40）
+//	if (p2 != NULL)
+//	{
+//		p = p2;
+//	}
+//
+//	return 0;
+//}
+
+//P65：动态内存分配（4）									2023.7.28
+//char* getmemory(void)//找错误
+//{
+//	static char p[] = "hello world";//局部变量在栈区，出函数会销毁。加了static
+//	return p;//malloc开辟的空间在堆区，不free不会回收
+//}
+//void test(void)
+//{
+//	char* str = NULL;//指针定义时必须初始化，不然就是野指针
+//	str = getmemory();
+//	printf(str);
+//}
+//int main()
+//{
+//	test();
+//	return 0;
+//}
+
+
+//void getmemory(char** p, int num)//找错误，内存泄漏
+//{
+//	*p = (char*)malloc(num);
+//}
+//void test(void)
+//{
+//	char* str = NULL;
+//	getmemory(&str, 100);
+//	strcpy(str, "hello");
+//	printf(str);
+//	//改进
+//	free(str);
+//	str = NULL;
+//}
+//int main()													//2023.7.29<高质量C/C++编程>
+//{
+//	test();
+//	return 0;
+//}
+
+
+//P66：动态内存分配（5）
 int main()
 {
-	int* p = (int*)malloc(40);
-	if (p == NULL)
-	{
-		return 0;
-	}
-	int* p2 = realloc(p, 100);
-	//int *p2= realloc(NULL,40);此时功能等价于malloc（40）
-	if (p2 != NULL)
-	{
-		p = p2;
-	}
 
 	return 0;
 }
-
-//P65：动态内存分配（4）									2023.7.28
