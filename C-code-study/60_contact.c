@@ -21,33 +21,73 @@ static int findbyname(const struct contact* ps,char name[max_name])
 //初始化通讯录
 void Initcontact(struct contact *ps)
 {
-	memset(ps->data, 0, sizeof(ps->data));
-	ps->size = 0;//设置通讯录最初只有一个元素
+	ps->data = (struct peoinfo*)malloc(default_sz * sizeof(struct peoinfo));
+	if (ps->data == NULL)
+		return;
+	ps->size = 0;
+	ps->capacity= default_sz;
+	//memset(ps->data, 0, sizeof(ps->data));
+	//ps->size = 0;//设置通讯录最初只有一个元素
 }
 
-
+//检测当前通讯录的容量
+void Checkcapacity(struct contact* ps)
+{
+	if (ps->size == ps->capacity)
+	{
+		//增容
+		peoinfo *ptr = realloc(ps->data, (ps->capacity + 2) * sizeof(peoinfo));
+		if (ptr != NULL)
+		{
+			ps->data = ptr;
+			ps->capacity += 2;
+			printf("增容成功\n");
+		}
+		else
+			printf("增容失败\n");
+	}
+}
 //增加元素
 void addcontact(struct contact* ps)
 {
-	if (ps->size == max)
-	{
-		printf("通讯录已满！\n");
-	}
-	else
-	{
-		printf("请输入名字:>\n");
-		scanf("%s", ps->data[ps->size].name);
-		printf("请输入年龄:>\n");
-		scanf("%d", &(ps->data[ps->size].age));
-		printf("请输入性别:>\n");
-		scanf("%s", ps->data[ps->size].sex);
-		printf("请输入电话:>\n");
-		scanf("%s", ps->data[ps->size].tele);
-		printf("请输入地址:>\n");
-		scanf("%s", ps->data[ps->size].addr); 
-		printf("添加成功！\n");
-		ps->size ++;
-	}
+	//检测当前通讯录的容量
+	//1.满了就增加容量
+	//2.不满就跳过
+	Checkcapacity(ps);
+
+	printf("请输入名字:>\n");
+	scanf("%s", ps->data[ps->size].name);
+	printf("请输入年龄:>\n");
+	scanf("%d", &(ps->data[ps->size].age));
+	printf("请输入性别:>\n");
+	scanf("%s", ps->data[ps->size].sex);
+	printf("请输入电话:>\n");
+	scanf("%s", ps->data[ps->size].tele);
+	printf("请输入地址:>\n");
+	scanf("%s", ps->data[ps->size].addr); 
+	printf("添加成功！\n");
+	ps->size ++;
+
+
+	//if (ps->size == max)
+	//{
+	//	printf("通讯录已满！\n");
+	//}
+	//else
+	//{
+	//	printf("请输入名字:>\n");
+	//	scanf("%s", ps->data[ps->size].name);
+	//	printf("请输入年龄:>\n");
+	//	scanf("%d", &(ps->data[ps->size].age));
+	//	printf("请输入性别:>\n");
+	//	scanf("%s", ps->data[ps->size].sex);
+	//	printf("请输入电话:>\n");
+	//	scanf("%s", ps->data[ps->size].tele);
+	//	printf("请输入地址:>\n");
+	//	scanf("%s", ps->data[ps->size].addr); 
+	//	printf("添加成功！\n");
+	//	ps->size ++;
+	//}
 }
 
 
