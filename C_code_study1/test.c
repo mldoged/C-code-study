@@ -211,5 +211,6 @@
 int main()
 {
 	//»®Ë®
+	//emo
 	return 0;
 }
