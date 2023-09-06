@@ -1,2 +1,5 @@
-﻿  60_test.c
+﻿  60_contact.c
+  60_test.c
+  正在生成代码...
+D:\gitproject\C-code-study\60_contact.c(18): warning C4715: “findbyname”: 不是所有的控件路径都返回值
   vs-c-code-s.vcxproj -> D:\gitproject\C-code-study\x64\Debug\vs-c-code-s.exe

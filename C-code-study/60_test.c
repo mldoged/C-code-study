@@ -10,12 +10,11 @@ void menu()
 	printf("***  0.exit                 ***\n");
 	printf("*******************************\n");
 }
-struct contact con;//con即通讯录，存放1000人信息和当前人数
 int main()
 {
 	int input = 0;
 	//创建通讯录
-
+	struct contact con;//con即通讯录，存放n人信息和当前人数
 	//初始化通讯录
 	Initcontact(&con);
 	do
@@ -45,6 +44,8 @@ int main()
 			sortcontact(&con);
 			break;
 		case eexit:
+			//退出前销毁通讯录，释放动态开辟的内存
+			destroycontact(&con);
 			printf("退出通讯录\n");
 			break;
 		default:

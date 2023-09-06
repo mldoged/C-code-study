@@ -22,7 +22,7 @@ static int findbyname(const struct contact* ps,char name[max_name])
 void Initcontact(struct contact *ps)
 {
 	ps->data = (struct peoinfo*)malloc(default_sz * sizeof(struct peoinfo));
-	if (ps->data == NULL)
+	if (ps->data == NULL)//空间开辟失败
 		return;
 	ps->size = 0;
 	ps->capacity= default_sz;
@@ -35,7 +35,7 @@ void Checkcapacity(struct contact* ps)
 {
 	if (ps->size == ps->capacity)
 	{
-		//增容
+		//增容，每次加2
 		peoinfo *ptr = realloc(ps->data, (ps->capacity + 2) * sizeof(peoinfo));
 		if (ptr != NULL)
 		{
@@ -67,27 +67,6 @@ void addcontact(struct contact* ps)
 	scanf("%s", ps->data[ps->size].addr); 
 	printf("添加成功！\n");
 	ps->size ++;
-
-
-	//if (ps->size == max)
-	//{
-	//	printf("通讯录已满！\n");
-	//}
-	//else
-	//{
-	//	printf("请输入名字:>\n");
-	//	scanf("%s", ps->data[ps->size].name);
-	//	printf("请输入年龄:>\n");
-	//	scanf("%d", &(ps->data[ps->size].age));
-	//	printf("请输入性别:>\n");
-	//	scanf("%s", ps->data[ps->size].sex);
-	//	printf("请输入电话:>\n");
-	//	scanf("%s", ps->data[ps->size].tele);
-	//	printf("请输入地址:>\n");
-	//	scanf("%s", ps->data[ps->size].addr); 
-	//	printf("添加成功！\n");
-	//	ps->size ++;
-	//}
 }
 
 
@@ -193,4 +172,11 @@ void modifycontact(struct contact* ps)
 void sortcontact(struct contact* ps)
 {
 
+}
+
+//退出前销毁通讯录，释放动态开辟的内存
+void destroycontact(contact* ps)
+{
+	free(ps->data);
+	ps->data = NULL;
 }
