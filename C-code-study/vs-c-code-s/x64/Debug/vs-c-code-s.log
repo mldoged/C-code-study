@@ -1,0 +1,4 @@
+﻿  38.c
+  LINK : 没有找到 D:\gitproject\C-code-study\x64\Debug\vs-c-code-s.exe 或上一个增量链接没有生成它；正在执行完全链接
+60_test.obj : error LNK2005: main 已经在 38.obj 中定义
+D:\gitproject\C-code-study\x64\Debug\vs-c-code-s.exe : fatal error LNK1169: 找到一个或多个多重定义的符号

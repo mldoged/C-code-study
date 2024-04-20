@@ -21,7 +21,7 @@ static int findbyname(const struct contact* ps,char name[max_name])
 //初始化通讯录
 void Initcontact(struct contact *ps)
 {
-	ps->data = (struct peoinfo*)malloc(default_sz * sizeof(struct peoinfo));
+	ps->data = (peoinfo*)malloc(default_sz * sizeof(peoinfo));
 	if (ps->data == NULL)//空间开辟失败
 		return;
 	ps->size = 0;

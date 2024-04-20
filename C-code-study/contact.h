@@ -4,7 +4,7 @@
 #define max_sex 6
 #define max_tele 12
 #define max_addr 30
-#define default_sz 3//初始默认通讯录个数
+#define default_sz 3 //初始默认通讯录个数
 #include<string.h>
 #include<stdio.h>
 #include<stdlib.h>
