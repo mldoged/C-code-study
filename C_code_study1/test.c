@@ -177,7 +177,7 @@
 //struct S 
 //{
 //	int a;
-//	int arr[0];
+//	int arr[0]; 
 //};
 //int main()
 //{
@@ -206,15 +206,41 @@
 //	return 0;
 //}
 
-//P67：动态内存分配（6）
+//P67：动态内存分配（6）								4.21
 
+//int main()
+//{
+
+//}
+
+
+//P70 文件操作（1）											4.21
+//int main()
+//{
+//	int a = 10000;
+//
+//	FILE* f = fopen("filetest.txt", "wb");
+//	fwrite(&a, 4, 1, f);
+//	fclose(f);
+//	f = NULL;
+//
+//	return 0;
+//}
+
+//P71 文件操作（2）											4.21
+//绝对路径、相对路径
+//..表示上一级路径
+//. 表示当前路径
 int main()
 {
-	//划水
-	//emo
-	//划水
-	//划水
-	//0817电路
-	//0818电路
+	//fopen("../../filetest.txt", "r");
+	FILE * fp = fopen("D:\\gitproject\\C_code_study1\\filetest.txt", "r");
+	if (fp == NULL)
+	{
+		printf("%s\n", "error(errno)");
+		return 0;
+	}
+	//打开成功
+
 	return 0;
 }

@@ -1,0 +1,52 @@
+{
+  "Version": 1,
+  "WorkspaceRootPath": "D:\\gitproject\\C_code_study1\\",
+  "Documents": [
+    {
+      "AbsoluteMoniker": "D:0:0:{9E4F2682-CA4B-41FC-B847-B9AE8B8091FB}|C_code_study1.vcxproj|D:\\gitproject\\C_code_study1\\test.c||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}",
+      "RelativeMoniker": "D:0:0:{9E4F2682-CA4B-41FC-B847-B9AE8B8091FB}|C_code_study1.vcxproj|solutionrelative:test.c||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{9E4F2682-CA4B-41FC-B847-B9AE8B8091FB}|C_code_study1.vcxproj|D:\\gitproject\\C_code_study1\\filetest.txt||{25834150-CD7E-11D0-92DF-00A0C9138C45}",
+      "RelativeMoniker": "D:0:0:{9E4F2682-CA4B-41FC-B847-B9AE8B8091FB}|C_code_study1.vcxproj|solutionrelative:filetest.txt||{25834150-CD7E-11D0-92DF-00A0C9138C45}"
+    }
+  ],
+  "DocumentGroupContainers": [
+    {
+      "Orientation": 0,
+      "VerticalTabListWidth": 256,
+      "DocumentGroups": [
+        {
+          "DockedWidth": 158,
+          "SelectedChildIndex": 1,
+          "Children": [
+            {
+              "$type": "Document",
+              "DocumentIndex": 1,
+              "Title": "filetest.txt",
+              "DocumentMoniker": "D:\\gitproject\\C_code_study1\\filetest.txt",
+              "RelativeDocumentMoniker": "filetest.txt",
+              "ToolTip": "D:\\gitproject\\C_code_study1\\filetest.txt",
+              "RelativeToolTip": "filetest.txt",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003109|",
+              "WhenOpened": "2024-04-20T20:25:32.728Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 0,
+              "Title": "test.c",
+              "DocumentMoniker": "D:\\gitproject\\C_code_study1\\test.c",
+              "RelativeDocumentMoniker": "test.c",
+              "ToolTip": "D:\\gitproject\\C_code_study1\\test.c",
+              "RelativeToolTip": "test.c",
+              "ViewState": "AQIAAOsAAAAAAAAAAAAkwPMAAAAAAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000423|",
+              "WhenOpened": "2023-07-24T17:54:55.408Z",
+              "EditorCaption": ""
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}
