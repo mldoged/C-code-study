@@ -1,0 +1,3 @@
+﻿  contact.c
+D:\gitproject\ContactFile\contact.c(18,1): warning C4715: “findbyname”: 不是所有的控件路径都返回值
+  ContactFile.vcxproj -> D:\gitproject\ContactFile\x64\Debug\ContactFile.exe

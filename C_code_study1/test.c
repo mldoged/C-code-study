@@ -231,16 +231,147 @@
 //绝对路径、相对路径
 //..表示上一级路径
 //. 表示当前路径
+//int main()//写文件
+//{
+//	//fopen("../../filetest.txt", "r");
+//	FILE * fp = fopen("D:\\gitproject\\C_code_study1\\filetest.txt", "w");
+//	if (fp == NULL)
+//	{
+//		printf("%s\n", strerror(errno));
+//		return 0;
+//	}
+//	//打开成功
+//	fputc('b',fp);
+//	fputc('i',fp);
+//	fputc('t',fp);
+//	//关闭文件
+//	fclose(fp);
+//	fp = NULL;
+//	return 0;
+//} 
+
+//int main()//读文件											5.2
+//{
+//	FILE* fpr = fopen("filetest.txt","r");
+//	if (fpr == NULL)//打开失败
+//	{
+//		printf("%s\n",strerror(errno));
+//		return 0;
+//	}
+//	//打开成功
+//	printf("%c", fgetc(fpr));
+//	printf("%c", fgetc(fpr));
+//	printf("%c", fgetc(fpr));
+//	//关闭文件
+//	fclose(fpr);
+//	fpr = NULL;
+//	return 0;
+//}
+
+//P72 文件操作（3）	
+//标准输入输出流
+//int main()
+//{
+//	char ch[1024] = { 0 };
+//	fgets(ch,1024,stdin);//gets(ch);
+//	fputs(ch,stdout);//puts(ch);
+//	return 0;
+//}
+
+//struct Struluanxie
+//{
+//	int i;
+//	float j;
+//	char ch[10];
+//}typedef s;
+//int main()
+//{
+//	s test = {1,3.14,"huang"};
+//	FILE* fpr = fopen("filetest.txt","w");
+//	if (fpr == NULL)//打开失败
+//	{
+//		printf("%s\n",strerror(errno));
+//		return 0;
+//	}
+//	//打开成功
+//	
+//	fprintf(fpr,"%d %f %s",test.i,test.j,test.ch);
+//
+//	//关闭文件
+//	fclose(fpr);
+//	fpr = NULL;
+//	return 0;
+//}
+
+////P73 文件操作（4）
+//struct S
+//{
+//	char name[20];
+//	int age;
+//	double score;
+//};
+//int main()
+//{
+//	//struct S s = { "zhangsan", 20, 55.6 };//写
+//	struct S temp = { 0 };//读
+//	FILE* pf = fopen("filetest.txt","rb");
+//	if (pf == NULL)
+//	{
+//		return 0;
+//	}
+//	//打开成功
+//	//fwrite(&s,sizeof(struct S),1,pf);//写
+//	fread(&temp, sizeof(struct S), 1, pf);//读
+//	printf("%s %d %f",temp.name,temp.age,temp.score);//读
+//	//关闭文件
+//	fclose(pf);
+//	pf = NULL;
+//	return 0;
+//}
+
+//int main()
+//{
+//	char ch;
+//	FILE* pf = fopen("filetest.txt","r");
+//	if (pf == NULL)
+//	{
+//		return 0;
+//	}
+//	//定位文件指针
+//	fseek(pf, -2, SEEK_END);
+//	//读取文件
+//	ch = fgetc(pf);
+//	printf("%c\n",ch);
+//	int i = ftell(pf);
+//	printf("%d\n", i);
+//	//关闭文件
+//	fclose(pf);
+//	pf = NULL;
+//	return 0;
+//}
+
+//P74 文件操作(5) 
+//int main()
+//{
+//ferror
+//feof
+//	return 0;
+//}
+
+//P75 作业讲解
+#pragma pack(4)
+struct test {
+	short m;//0-1
+	char i;//2
+	//3
+	long j;//4-7
+	long j;//8-11
+	//偏移量11加1=12，12为short、char、long大小的最大数的倍数，故结构体大小为12
+};
+
+//P76 C语言预处理（1）								5.4
 int main()
 {
-	//fopen("../../filetest.txt", "r");
-	FILE * fp = fopen("D:\\gitproject\\C_code_study1\\filetest.txt", "r");
-	if (fp == NULL)
-	{
-		printf("%s\n", "error(errno)");
-		return 0;
-	}
-	//打开成功
 
 	return 0;
 }
